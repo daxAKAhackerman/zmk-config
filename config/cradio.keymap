@@ -64,19 +64,19 @@
 
         nav_num_layer {
             bindings = <
-&none             &kp KP_N7           &kp KP_N8           &kp KP_N9             &td0            &kp PAGE_UP    &kp HOME   &kp UP     &kp END        &none
-&ht LCTRL KP_DOT  &ht LEFT_ALT KP_N4  &ht LEFT_GUI KP_N5  &ht LEFT_SHIFT KP_N6  &td1            &kp PAGE_DOWN  &kp LEFT   &kp DOWN   &kp RIGHT      &kp LC(W)
-&kp KP_N0         &kp KP_N1           &kp KP_N2           &kp KP_N3             &kp KP_EQUAL    &none          &kp LC(U)  &kp LC(D)  &kp LC(SPACE)  &kp LA(LC(LEFT_SHIFT))
-                                                          &trans                &kp ENTER       &none          &trans
+&none          &kp N7       &kp N8            &kp N9             &td0         &kp PAGE_UP    &kp HOME   &kp UP     &kp END        &none
+&ht LCTRL DOT  &ht LALT N4  &ht LEFT_META N5  &ht LEFT_SHIFT N6  &td1         &kp PAGE_DOWN  &kp LEFT   &kp DOWN   &kp RIGHT      &kp LC(W)
+&kp N0         &kp N1       &kp N2            &kp N3             &kp EQUAL    &none          &kp LC(U)  &kp LC(D)  &kp LC(SPACE)  &kp LA(LC(LEFT_SHIFT))
+                                              &trans             &kp ENTER    &none          &trans
             >;
         };
 
         fn_num_layer {
             bindings = <
-&kp NUMBER_1         &kp N2           &kp N3            &kp N4             &kp N5            &kp N6                    &kp N7             &kp N8            &kp N9            &kp N0
-&ht LEFT_CONTROL F2  &ht LEFT_ALT F3  &ht LEFT_META F4  &ht LEFT_SHIFT F5  &kp F6            &kp F7                    &ht LEFT_SHIFT F8  &ht LEFT_META F9  &ht LEFT_ALT F10  &ht LCTRL F11
-&kp F1               &none            &none             &kp CAPSLOCK       &kp SYSREQ        &kp LC(LG(LS(NUMBER_4)))  &caps_word         &none             &none             &kp F12
-                                                        &trans             &bt BT_CLR_ALL    &none                     &trans
+&kp NUMBER_1         &kp N2           &kp N3            &kp N4             &kp N5             &kp N6                    &kp N7             &kp N8            &kp N9            &kp N0
+&ht LEFT_CONTROL F2  &ht LEFT_ALT F3  &ht LEFT_META F4  &ht LEFT_SHIFT F5  &kp F6             &kp F7                    &ht LEFT_SHIFT F8  &ht LEFT_META F9  &ht LEFT_ALT F10  &ht LCTRL F11
+&kp F1               &none            &none             &kp CAPSLOCK       &kp PRINTSCREEN    &kp LC(LG(LS(NUMBER_4)))  &caps_word         &none             &none             &kp F12
+                                                        &trans             &bt BT_CLR_ALL     &none                     &trans
             >;
         };
     };
