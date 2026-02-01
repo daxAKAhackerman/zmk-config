@@ -16,12 +16,14 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
+
         td0: tap_dance_plus_mult {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <180>;
             bindings = <&kp KP_PLUS>, <&kp KP_MULTIPLY>;
         };
+
         td1: tap_dance_minus_div {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -33,7 +35,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        tri_layer {
+        fn_num_layer {
             if-layers = <1 2>;
             then-layer = <3>;
         };
@@ -44,10 +46,10 @@
 
         main_layer {
             bindings = <
-&kp Q        &kp W       &kp F       &kp P                    &kp B      &kp J     &kp L                    &kp U       &kp Y       &kp SEMICOLON
-&ht LCTRL A  &ht LALT R  &ht LGUI S  &ht LSHFT T              &kp G      &kp M     &ht LSHFT N              &ht LGUI E  &ht LALT I  &ht LCTRL O
-&kp Z        &kp X       &kp C       &ht LS(LG(LA(LC(D)))) D  &kp V      &kp K     &ht LS(LG(LC(LA(H)))) H  &kp COMMA   &kp PERIOD  &kp GRAVE
-                                     &lt 1 SPACE              &kp ESC    &kp BSPC  &lt 2 TAB
+&kp Q        &kp W       &kp F       &kp P                         &kp B      &kp J     &kp L                         &kp U       &kp Y       &kp SEMICOLON
+&ht LCTRL A  &ht LALT R  &ht LGUI S  &ht LSHFT T                   &kp G      &kp M     &ht LSHFT N                   &ht LGUI E  &ht LALT I  &ht LCTRL O
+&kp Z        &kp X       &kp C       &ht LG(LA(LC(LEFT_SHIFT))) D  &kp V      &kp K     &ht LG(LC(LA(LEFT_SHIFT))) H  &kp COMMA   &kp PERIOD  &kp GRAVE
+                                     &lt 1 SPACE                   &kp ESC    &kp BSPC  &lt 2 TAB
             >;
         };
 
@@ -69,12 +71,12 @@
             >;
         };
 
-        tri_layer {
+        fn_num_layer {
             bindings = <
-&sys_reset   &trans  &trans  &trans      &bt BT_SEL 0    &trans  &trans  &trans  &trans  &sys_reset
-&bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &trans  &trans  &trans  &trans  &bootloader
-&trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans  &trans  &trans  &trans  &trans
-                             &trans      &trans          &trans  &trans
+&kp NUMBER_1         &kp N2           &kp N3            &kp N4             &kp N5            &kp N6                    &kp N7             &kp N8            &kp N9            &kp N0
+&ht LEFT_CONTROL F2  &ht LEFT_ALT F3  &ht LEFT_META F4  &ht LEFT_SHIFT F5  &kp F6            &kp F7                    &ht LEFT_SHIFT F8  &ht LEFT_META F9  &ht LEFT_ALT F10  &ht LCTRL F11
+&kp F1               &none            &none             &kp CAPSLOCK       &kp SYSREQ        &kp LC(LG(LS(NUMBER_4)))  &caps_word         &none             &none             &kp F12
+                                                        &trans             &bt BT_CLR_ALL    &none                     &trans
             >;
         };
     };
