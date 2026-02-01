@@ -16,6 +16,18 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
+        td0: tap_dance_plus_mult {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <180>;
+            bindings = <&kp KP_PLUS>, <&kp KP_MULTIPLY>;
+        };
+        td1: tap_dance_minus_div {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <180>;
+            bindings = <&kp KP_MINUS>, <&kp KP_DIVIDE>;
+        };
     };
 
     conditional_layers {
@@ -50,8 +62,8 @@
 
         nav_num_layer {
             bindings = <
-&none             &kp KP_N7           &kp KP_N8           &kp KP_N9             &kp KP_PLUS     &kp PAGE_UP    &kp HOME   &kp UP     &kp END        &none
-&ht LCTRL KP_DOT  &ht LEFT_ALT KP_N4  &ht LEFT_GUI KP_N5  &ht LEFT_SHIFT KP_N6  &kp KP_MINUS    &kp PAGE_DOWN  &kp LEFT   &kp DOWN   &kp RIGHT      &kp LC(W)
+&none             &kp KP_N7           &kp KP_N8           &kp KP_N9             &td0            &kp PAGE_UP    &kp HOME   &kp UP     &kp END        &none
+&ht LCTRL KP_DOT  &ht LEFT_ALT KP_N4  &ht LEFT_GUI KP_N5  &ht LEFT_SHIFT KP_N6  &td1            &kp PAGE_DOWN  &kp LEFT   &kp DOWN   &kp RIGHT      &kp LC(W)
 &kp KP_N0         &kp KP_N1           &kp KP_N2           &kp KP_N3             &kp KP_EQUAL    &none          &kp LC(U)  &kp LC(D)  &kp LC(SPACE)  &kp LA(LC(LEFT_SHIFT))
                                                           &trans                &kp ENTER       &none          &trans
             >;
