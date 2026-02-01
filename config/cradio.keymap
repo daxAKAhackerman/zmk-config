@@ -41,10 +41,10 @@
 
         sym_layer {
             bindings = <
-&kp EXCL   &kp AT            &kp HASH              &kp DLLR  &kp RA(N9)       &kp RA(N0)      &kp EQUAL              &kp MINUS       &kp PLUS           &none
-&kp PRCNT  &kp CARET         &kp AMPS              &kp STAR  &kp RA(N7)       &kp RA(N8)      &kp LS(COMMA)          &kp LS(PERIOD)  &kp RA(GRAVE)      &kp RA(RIGHT_BRACKET)
-&kp SLASH  &kp LEFT_BRACKET  &kp RA(LEFT_BRACKET)  &kp LPAR  &kp RA(COMMA)    &kp RA(PERIOD)  &kp RIGHT_PARENTHESIS  &kp UNDER       &kp RIGHT_BRACKET  &kp LS(LEFT_BRACKET)
-                                                   &trans    &none            &kp DELETE      &trans
+&kp EXCL         &kp AT              &kp HASH              &kp DLLR             &kp RA(N9)       &kp RA(N0)      &kp EQUAL                 &kp MINUS                 &kp PLUS                &none
+&ht LCTRL PRCNT  &ht LEFT_ALT CARET  &ht LEFT_META AMPS    &ht LEFT_SHIFT STAR  &kp RA(N7)       &kp RA(N8)      &ht LEFT_SHIFT LS(COMMA)  &ht LEFT_META LS(PERIOD)  &ht LEFT_ALT RA(GRAVE)  &ht LCTRL RA(RIGHT_BRACKET)
+&kp SLASH        &kp LEFT_BRACKET    &kp RA(LEFT_BRACKET)  &kp LPAR             &kp RA(COMMA)    &kp RA(PERIOD)  &kp RIGHT_PARENTHESIS     &kp UNDER                 &kp RIGHT_BRACKET       &kp LS(LEFT_BRACKET)
+                                                           &trans               &none            &kp DELETE      &trans
             >;
         };
 
