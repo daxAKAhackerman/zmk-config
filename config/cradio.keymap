@@ -33,6 +33,10 @@
             hold-trigger-on-release;
         };
 
+        &lt {
+            flavor = "balanced";
+        };
+
         td0: tap_dance_plus_mult {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
