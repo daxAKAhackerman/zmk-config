@@ -102,7 +102,7 @@
 &kp NUMBER_1          &kp N2            &kp N3             &kp N4              &kp N5             &kp N6                    &kp N7              &kp N8             &kp N9             &kp N0
 &htl LEFT_CONTROL F2  &htl LEFT_ALT F3  &htl LEFT_META F4  &htl LEFT_SHIFT F5  &kp F6             &kp F7                    &htr LEFT_SHIFT F8  &htr LEFT_META F9  &htr LEFT_ALT F10  &htr LCTRL F11
 &kp F1                &none             &none              &kp CAPSLOCK        &kp PRINTSCREEN    &kp LC(LG(LS(NUMBER_4)))  &caps_word          &none              &none              &kp F12
-                                                           &trans              &bt BT_CLR_ALL     &bt BT_NXT                &trans
+                                                           &trans              &bt BT_CLR         &bt BT_NXT                &trans
             >;
         };
     };
