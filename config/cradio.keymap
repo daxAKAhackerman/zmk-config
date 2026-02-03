@@ -33,11 +33,14 @@
             hold-trigger-on-release;
         };
 
-        &lt {
+        ltlr: layer_tap_left_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <180>;
             quick-tap-ms = <150>;
             require-prior-idle-ms = <100>;
+            bindings = <&mo>, <&kp>;
         };
 
         td0: tap_dance_plus_mult {
@@ -72,7 +75,7 @@
 &kp Q         &kp W        &kp F        &kp P                          &kp B      &kp J     &kp L                          &kp U        &kp Y        &kp SEMICOLON
 &htl LCTRL A  &htl LALT R  &htl LGUI S  &htl LSHFT T                   &kp G      &kp M     &htr LSHFT N                   &htr LGUI E  &htr LALT I  &htr LCTRL O
 &kp Z         &kp X        &kp C        &htl LG(LA(LC(LEFT_SHIFT))) D  &kp V      &kp K     &htr LG(LC(LA(LEFT_SHIFT))) H  &kp COMMA    &kp PERIOD   &kp GRAVE
-                                        &lt 1 SPACE                    &kp ESC    &kp BSPC  &lt 2 TAB
+                                        &ltlr 1 SPACE                  &kp ESC    &kp BSPC  &ltlr 2 TAB
             >;
         };
 
